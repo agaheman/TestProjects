@@ -37,8 +37,6 @@ namespace BitProperties
             var optionsRestored = (Option)Enum.Parse(typeof(Option), savedValue.ToString());
 
             Console.WriteLine("LoadOptions");
-            Console.WriteLine("_".PadRight(50, '_'));
-
             ShowDetails(optionsRestored);
 
             var options = optionsRestored.ToString()
@@ -58,8 +56,6 @@ namespace BitProperties
             }
 
             Console.WriteLine("SaveOptions");
-            Console.WriteLine("_".PadRight(50,'_'));
-
             ShowDetails(optionsToStore);
 
             return (int)optionsToStore;
@@ -67,6 +63,8 @@ namespace BitProperties
 
         private static void ShowDetails(Option options)
         {
+            Console.WriteLine("_".PadRight(50, '_'));
+
             var Options = options.ToString()
                                    .Replace(" ", null)
                                    .Split(',').ToList()
