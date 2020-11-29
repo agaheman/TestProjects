@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashSetTest", "HashSetTest\HashSetTest.csproj", "{3AE39E0F-8FFA-4DF2-A3B3-FC388498E74A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppWithDIAndLogger", "ConsoleAppWithDIAndLogger\ConsoleAppWithDIAndLogger.csproj", "{86F8FAA6-A29F-48FC-960E-7EE635B9DFEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppWithDIAndLogger", "ConsoleAppWithDIAndLogger\ConsoleAppWithDIAndLogger.csproj", "{86F8FAA6-A29F-48FC-960E-7EE635B9DFEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogWithOptionPattern", "SerilogWithOptionPattern\SerilogWithOptionPattern.csproj", "{6171DC43-E3D7-4248-A721-E07C20F34F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{86F8FAA6-A29F-48FC-960E-7EE635B9DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86F8FAA6-A29F-48FC-960E-7EE635B9DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86F8FAA6-A29F-48FC-960E-7EE635B9DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
