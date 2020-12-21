@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppWithDIAndLogger",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogWithOptionPattern", "SerilogWithOptionPattern\SerilogWithOptionPattern.csproj", "{6171DC43-E3D7-4248-A721-E07C20F34F68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftDelete", "SoftDelete\SoftDelete.csproj", "{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6171DC43-E3D7-4248-A721-E07C20F34F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
