@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogWithOptionPattern", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftDelete", "SoftDelete\SoftDelete.csproj", "{D755A2D2-FA47-4AF6-AF02-792FF27DCF07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyValueConverter", "MyValueConverter\MyValueConverter.csproj", "{F7E30D3F-81E2-4781-A68D-5C73BFE4E237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyValueConverter", "MyValueConverter\MyValueConverter.csproj", "{F7E30D3F-81E2-4781-A68D-5C73BFE4E237}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{0179D4A9-F511-437B-B125-DFDC3061EB28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F7E30D3F-81E2-4781-A68D-5C73BFE4E237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7E30D3F-81E2-4781-A68D-5C73BFE4E237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7E30D3F-81E2-4781-A68D-5C73BFE4E237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0179D4A9-F511-437B-B125-DFDC3061EB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0179D4A9-F511-437B-B125-DFDC3061EB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0179D4A9-F511-437B-B125-DFDC3061EB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0179D4A9-F511-437B-B125-DFDC3061EB28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

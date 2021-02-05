@@ -1,0 +1,88 @@
+﻿@model WebApplication.Models.SampleModel
+
+<h4>SampleModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="myForm" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.HiddenFor(m => m.Id)
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*@Html.HiddenFor(m => m.EditDescription)*@
+                <input asp-for="EditDescription" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="showModal()" class="btn btn-primary">
+                    ثبت
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function showModal() {
+            var form = $('#myForm');
+            $.validator.unobtrusive.parse(form);
+            var validationResult = form.validate().form();
+            if (validationResult) {
+                $('#CommandDescriptionModal').modal('toggle');
+            }
+        }
+
+        function setCommandDescription() {
+            var modalCommandDescription = $('#ModalEditDescription').val();
+            $('#EditDescription').val(modalCommandDescription);
+            document.forms[0].submit();
+        }
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<!-- #region Modal -->
+
+<div class="modal fade" id="CommandDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="CommandDescriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="CommandDescriptionModalLabel">توضیحات درمورد تغییر اعمالی</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label class="control-label">دلیل تغییر</label>
+                    <input id="ModalEditDescription" class="form-control" data-val="true" data-val-required="وارد کردن دلیل تغییر الزامی است." />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="ModalEditDescription" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">انصراف</button>
+                <button type="button" class="btn btn-primary" onclick="setCommandDescription()">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #endregion -->
