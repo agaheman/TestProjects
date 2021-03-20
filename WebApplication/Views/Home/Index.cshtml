@@ -6,4 +6,23 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
+    <button id="DeleteButton" data-CustomerId="12">Show</button>
 </div>
+@section Scripts{ 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#DeleteButton").click(function () {
+            var dd = $(this).data("customerid");
+            console.info(dd);
+            $.ajax({
+                url: 'Home/Delete',
+                data: { 'CustomerId': dd},
+                type: 'DELETE',
+                success: function (result) {
+                    alert(result);
+                }
+            })
+        });
+    });
+</script>
+}

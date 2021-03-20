@@ -16,6 +16,14 @@ namespace WebApplication.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "وارد کردن نام خانوادگی الزامی است.")]
         public string LastName { get; set; }
 
+        [Display(Name = "جنسیت")]
+        public Gender Gender { get; set; }
+
+
+        [Display(Name = "نوع همکاری")]
+        public WorkingType WorkingType { get; set; }
+
+
         [HiddenInput]
         public string EditDescription { get; set; }
     }

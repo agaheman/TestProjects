@@ -1,5 +1,5 @@
 ﻿@model WebApplication.Models.SampleModel
-
+@using WebApplication.Extensions;
 <h4>SampleModel</h4>
 <hr />
 <div class="row">
@@ -19,6 +19,25 @@
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()"></select>
+            </div>
+
+            <div class="form-group">
+                @foreach (WorkingType workingType in Enum.GetValues(typeof(WebApplication.Models.WorkingType)))
+                {
+                    <label>
+                        <input asp-for="WorkingType" type="radio" value="@workingType" />
+                        @workingType.GetDisplayName()
+                    </label>
+                }
+            </div>
+            <br />
+            @{
+                <input radio asp-for="@WorkingType.PartTime" />
+            }
+
             <div class="form-group">
                 @*@Html.HiddenFor(m => m.EditDescription)*@
                 <input asp-for="EditDescription" class="form-control" />
